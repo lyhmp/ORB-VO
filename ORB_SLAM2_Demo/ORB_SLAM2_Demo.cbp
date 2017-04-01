@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ORB_SLAM2_Demo" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ORB_SLAM2_Demo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="-DDebug" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ORB_SLAM2_Demo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../../../../../../../lib_install/opencv-3.1.0/include/opencv2" />
+			<Add directory="../../../../../../../lib_install/opencv-3.1.0/include/opencv" />
+			<Add directory="../../../../../../../github/ORB_SLAM2/src" />
+			<Add directory="../../../../../../../github/ORB_SLAM2" />
+			<Add directory="../../../../../../../github/Pangolin/build/src/include" />
+			<Add directory="../../../../../../../github/Pangolin/include" />
+			<Add directory="../../../../ThirdPartyLib/" />
+		</Compiler>
+		<Linker>
+			<Add option="-Wl,-rpath=../../../../../../../github/ORB_SLAM2/lib/" />
+			<Add option="-Wl,-rpath=../../../../../../../github/Pangolin/build/src/" />
+			<Add library="m" />
+			<Add library="GL" />
+			<Add library="GLU" />
+			<Add library="realsense" />
+			<Add library="../../../../../../../Downloads/Pangolin-master/build/src/libpangolin.so" />
+			<Add library="../../../../../../../github/ORB_SLAM2/lib/libORB_SLAM2.so" />
+			<Add library="../../../../../../../lib_install/opencv-3.1.0/build/lib/libcv2.so" />
+			<Add library="../../../../../../../lib_install/opencv-3.1.0/build/lib/libopencv_core.so" />
+			<Add library="../../../../../../../lib_install/opencv-3.1.0/build/lib/libopencv_flann.so" />
+			<Add library="../../../../../../../lib_install/opencv-3.1.0/build/lib/libopencv_highgui.so" />
+			<Add library="../../../../../../../lib_install/opencv-3.1.0/build/lib/libopencv_imgcodecs.so" />
+			<Add library="../../../../../../../lib_install/opencv-3.1.0/build/lib/libopencv_imgproc.so" />
+			<Add library="../../../../../../../lib_install/opencv-3.1.0/build/lib/libopencv_shape.so" />
+			<Add library="../../../../../../../lib_install/opencv-3.1.0/build/lib/libopencv_video.so" />
+			<Add library="../../../../../../../github/ORB_SLAM2-master/Thirdparty/DBoW2/lib/libDBoW2.so" />
+		</Linker>
+		<Unit filename="../../../../../../../github/ORB_SLAM2/include/System.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
